@@ -39,3 +39,7 @@ readpst,mdb-shell,mdb-sql
 # Techniques
 To download all files from ftp server:
 wget -m --no-passive ftp://username:password@x.x.x.x
+
+To login in imap server using openssl:
+openssl s_client -connect chaos.htb:993
+link which can help:http://blog.viggy.in/?p=9
