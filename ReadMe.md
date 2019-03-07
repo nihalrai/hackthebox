@@ -45,3 +45,6 @@ wget -m --no-passive ftp://username:password@x.x.x.x
 To login in imap server using openssl:
 openssl s_client -connect chaos.htb:993
 link which can help:http://blog.viggy.in/?p=9
+Linux enumerarion help:  https://www.rebootuser.com/?p=1623#.V5QOe7grKUl
+
+
