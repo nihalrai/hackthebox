@@ -1,2 +1,5 @@
 PostgreSQL :
 pssql -h 127.0.0.1 -d unix -h USERNAME
+
+Massscan:
+masscan -p1-65535,U:1-65535 10.10.10.x --rate=1000 -e tun0
