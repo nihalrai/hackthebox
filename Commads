@@ -1,0 +1,2 @@
+PostgreSQL :
+pssql -h 127.0.0.1 -d unix -h USERNAME
